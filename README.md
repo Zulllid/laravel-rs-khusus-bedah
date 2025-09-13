@@ -23,3 +23,6 @@ Portofolio Fullstack Laravel 8 — Aplikasi manajemen rumah sakit (CRUD pasien, 
 - URL: `/appointments`
 - Fungsi:
    - Buat janji poli pasien
+   - Pilih pasien, poli, dokter, jadwal
+   - Edit & hapus janji
+- Relasi: Patient ↔ Poli ↔ Doctor
