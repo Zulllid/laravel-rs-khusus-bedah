@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PatientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,8 @@ require __DIR__.'/auth.php';
 Route::get('/admin', function() {
     return view('admin.dashboard');
 })->middleware(['auth', 'role:Admin']);
+
+//semua route di dalam group ini hanya bisa diakses oleh user yang login
+Route::middleware(['auth'])->group(function() {
+    Route::resource('patients', PatientController::class);
+});

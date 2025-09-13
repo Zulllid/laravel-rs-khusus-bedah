@@ -6,8 +6,16 @@ Portofolio Fullstack Laravel 8 — Aplikasi manajemen rumah sakit (CRUD pasien, 
    ```bash
    git clone https://github.com/Zulllid/laravel-rs-khusus-bedah.git
    cd laravel-rs-khusus-bedah
-## 🔑 Login & Role
+### 🔑 Login & Role
 - Admin: `admin@rs.com` / `password123`
 - Role-based access middleware sudah diterapkan
 - Contoh akses:
    - Admin dashboard → `/admin` (hanya Admin)
+### 👩‍⚕️ CRUD Pasien
+- URL: `/patients`
+- Fungsi:
+   - Tambah Pasien
+   - Edit Pasient
+   - Hapus Pasient
+   - Lihat daftar pasient
+- validasi server-side sudah diterapkan
