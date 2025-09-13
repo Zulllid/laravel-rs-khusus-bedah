@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PatientController;
 
 /*
@@ -31,4 +32,8 @@ Route::get('/admin', function() {
 //semua route di dalam group ini hanya bisa diakses oleh user yang login
 Route::middleware(['auth'])->group(function() {
     Route::resource('patients', PatientController::class);
+});
+
+Route::middleware(['auth'])->group(function() {
+    Route::resource('appointments', AppointmentController::class);
 });
