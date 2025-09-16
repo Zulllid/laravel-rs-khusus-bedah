@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\PatientController;
+use App\Http\Controllers\QueueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,11 @@ Route::middleware(['auth'])->group(function() {
 
 Route::middleware(['auth'])->group(function() {
     Route::resource('appointments', AppointmentController::class);
+});
+
+Route::middleware(['auth'])->group(function() {
+    Route::get('/queues', [QueueController::class, 'index'])->name('queues.index');
+    Route::post('/queues/enqueue/{appointment}', [QueueController::class, 'enqueue'])->name('queues.enqueue');
+    Route::post('/queues/call-next', [QueueController::class, 'callNext'])->name('queues.callNext');
+    Route::post('/queues/{queue}/done', [QueueController::class, 'done'])->name('queues.done');
 });

@@ -26,3 +26,10 @@ Portofolio Fullstack Laravel 8 — Aplikasi manajemen rumah sakit (CRUD pasien, 
    - Pilih pasien, poli, dokter, jadwal
    - Edit & hapus janji
 - Relasi: Patient ↔ Poli ↔ Doctor
+### 📋 Modul Antrian
+- URL: `/queues`
+- Fungsi:
+  - Generate nomor antrian otomatis saat pasien masuk
+  - Menampilkan daftar antrian IGD/Poli
+  - Panggil next pasien & selesai
+- Relasi: Appointment → Queue
