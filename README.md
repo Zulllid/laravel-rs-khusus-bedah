@@ -1,4 +1,4 @@
-# 🏥 Sistem Informasi Rumah Sakit Khusus Bedah
+# 🏥 Sistem Informasi Rumah Sakit Khusus Bedah (Masih Dalam Pembangunan)
 Portofolio Fullstack Laravel 8 — Aplikasi manajemen rumah sakit (CRUD pasien, antrian, farmasi, kasir, rawat inap, dashboard).
 
 ## 🚀 Cara Menjalankan Project (Demo Lokal)
